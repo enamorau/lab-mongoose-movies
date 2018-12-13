@@ -1,0 +1,20 @@
+<h1>CELEBRITIES</h1>
+<div>
+    {{#each celebrities}}
+    <div>
+
+        <span width= "500px"> 
+            <a href="/celebrities/show/{{id}}">{{name}}</a> 
+        </span>
+
+        <a class="button" href="/edit">edit</a>
+
+        <form style="display: inline-block" action="/celebrities/{{id}}/delete" method="post">
+            <button class="delete-button">delete</button>
+        </form>
+
+    </div>
+    {{/each}}
+    <br>
+    <a class="button" href="new">add a new celebrity !</a>
+</div>

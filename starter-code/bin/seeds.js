@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Celebrity = require('../')
+const Celebrity = require('../models/celebrity')
 
 const dbName = 'celebrity-DB'
 mongoose.connect(`mongodb://localhost/${dbName}`);
@@ -27,7 +27,7 @@ const celebrities = [
 Celebrity.create(celebrities)
     .then(
         () => {
-            console.log(`Created ${celebrities.length} books`)
+            console.log(`Created ${celebrities.length} celebrities`)
             mongoose.connection.close()
         }
     )
