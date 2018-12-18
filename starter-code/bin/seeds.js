@@ -1,9 +1,11 @@
 const mongoose = require('mongoose')
 const Celebrity = require('../models/celebrity')
+const Movie = require('../models/movies')
+
+Celebrity.collection.drop();
+Movie.collection.drop();
 
 const dbName = 'celebrity-DB'
-mongoose.connect(`mongodb://localhost/${dbName}`);
-
 
 const celebrities = [
     {
@@ -24,13 +26,41 @@ const celebrities = [
 
 ]
 
-Celebrity.create(celebrities)
-    .then(
-        () => {
-            console.log(`Created ${celebrities.length} celebrities`)
-            mongoose.connection.close()
-        }
-    )
-    .catch(err => { throw (err) }
-    )
 
+const movies = [
+    {
+        title: "Alice in answerland",
+        genre: "documentary",
+        plot: "Alice looking everywhere for answers",
+    },
+    {
+        title: "006",
+        genre: "genre",
+        plot: "A 5 hour long introspection on being one number short from being 007 ",
+    },
+    {
+        title: "never shot",
+        genre: "undefined",
+        plot: "void",
+    }
+
+]
+
+
+
+
+mongoose.connect(`mongodb://localhost/${dbName}`)
+    .then(() => {
+        
+        const celebs = Celebrity.create(celebrities)
+        const films = Movie.create(movies)
+
+        Promise.all([celebs, films])
+
+            .then(tab => {
+                console.log(`inserted ${tab[0].length} celebrities & ${tab[1].length} movies`)
+                mongoose.disconnect()
+            }
+            )
+            .catch(err => console.error(err))
+    })

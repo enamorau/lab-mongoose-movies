@@ -3,18 +3,18 @@
     {{#each celebrities}}
     <div>
 
-        <span width= "500px"> 
+        <span > 
             <a href="/celebrities/show/{{id}}">{{name}}</a> 
         </span>
 
-        <a class="button" href="/edit">edit</a>
+        <a class="button"  href="/celebrities/{{id}}/edit/">edit</a>
 
-        <form style="display: inline-block" action="/celebrities/{{id}}/delete" method="post">
-            <button class="delete-button">delete</button>
+        <form  style="display:inline-flex" action="/celebrities/{{id}}/delete" method="post">
+            <button class="delete-button" >delete</button>
         </form>
 
     </div>
     {{/each}}
     <br>
-    <a class="button" href="new">add a new celebrity !</a>
+    <a class="button" style="display:inline-flex" href="new">add a new celebrity !</a>
 </div>
