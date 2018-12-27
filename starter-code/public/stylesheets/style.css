@@ -8,18 +8,24 @@ text-decoration: none;
 }
 
   span {
-    display: inline-flex;
-    float: right;
+    float: left;
     min-width: 400px;
     max-width: 600px;
-    min-height: 40px;
     }
+
+  div {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
   .button {
     backface-visibility: hidden;
-  position: relative;
+    position: relative;
   cursor: pointer;
-  display: inline-flex;
+  float:  right;
   white-space: nowrap;
   background: linear-gradient(180deg,#f9f9f9 0%,#e0e0e0 100%);
   border-radius: 100px;
@@ -35,34 +41,14 @@ text-decoration: none;
   margin-left: 30px;
   text-decoration: none;
   }
-  .button > div {
-    color: #999;
-  font-size: 10px;
-  font-family: Helvetica Neue;
-  font-weight: initial;
-  font-style: normal;
-  text-align: center;
-  margin: 0px 0px 0px 0px
-  }
-  .button > i {
-    font-size: 1em;
-  border-radius: 0px;
-  border: 0px solid transparent;
-  border-width: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  position: static
-  }
-  .button > .ld {
-    font-size: initial
-  }
 
 
 
   .delete-button {
     backface-visibility: hidden;
-  position: relative;
+    position: relative;
   cursor: pointer;
+  float:  right;
   white-space: nowrap;
   background: linear-gradient(180deg,red 0%, brown 100%);
   border-radius: 100px;
@@ -78,27 +64,7 @@ text-decoration: none;
   margin-left: 30px;
   text-decoration: none;
   }
-  .delete-button > div {
-    color: #999;
-  font-size: 10px;
-  font-family: Helvetica Neue;
-  font-weight: initial;
-  font-style: normal;
-  text-align: center;
-  margin: 0px 0px 0px 0px
-  }
-  .delete-button > i {
-    font-size: 1em;
-  border-radius: 0px;
-  border: 0px solid transparent;
-  border-width: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  position: static
-  }
-  .delete-button > .ld {
-    font-size: initial
-  }
+
 
 /*# sourceMappingURL=style.css.map */
 

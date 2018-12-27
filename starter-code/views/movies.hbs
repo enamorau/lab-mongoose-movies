@@ -9,12 +9,12 @@
 
         <a class="button"  href="/movies/{{id}}/edit/">edit</a>
 
-        <form  style="display:inline-flex" action="/movies/{{id}}/delete" method="post">
+        <form  action="/movies/{{id}}/delete" method="post">
             <button class="delete-button" >delete</button>
         </form>
 
     </div>
     {{/each}}
     <br>
-    <a class="button" style="display:inline-flex" href="new-m">add a new movie !</a>
+    <a class="button" href="new-m">add a new movie !</a>
 </div>
