@@ -139,11 +139,11 @@ router.post('/show-m/:id/add-celeb/', (req, res, next) => {
 
         .then((celeb) => {
 
-            Movie.update({ _id: req.params.id }, { $push: { actors : celeb._id } })
-            .then(()=>{
-                res.redirect('/movies/index');
-            }) 
-            
+            Movie.update({ _id: req.params.id }, { $push: { actors: celeb._id } })
+                .then(() => {
+                    res.redirect('/movies/index');
+                })
+
         })
         .catch((error) => {
             console.log(error);

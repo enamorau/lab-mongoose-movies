@@ -2,4 +2,16 @@
 <br>
 <p>Occupation: {{celebrity.occupation}}</p>
 <p>Catchphrase: {{celebrity.catchPhrase}}</p>
+
+
+<h3>Movies:</h3>
+<ul>
+    {{#each celebrity.movies}}
+    <li>{{this.title}}</li>
+    {{/each}}
+</ul>
+
+<a class="button-celeb" href="/celebrities/show/{{celebrity._id}}/add-movie/">add movie</a>
+
+
 <a href="/celebrities/index">Return</a>
