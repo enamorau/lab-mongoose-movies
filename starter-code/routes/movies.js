@@ -4,6 +4,8 @@ const Movie = require('../models/movies');
 const Celebrity = require('../models/celebrity');
 
 
+// get and render render movies index
+
 router.get('/index', (req, res, next) => {
     Movie.find()
         .then(movies => res.render('movies', { movies })
@@ -11,6 +13,8 @@ router.get('/index', (req, res, next) => {
         .catch(err => console.log(`movies err = ${err}`)
         )
 })
+
+// get and render movie details + populate list of actors with celebrities db when linked
 
 router.get('/show-m/:id', (req, res, next) => {
     let moviesId = req.params.id;
@@ -25,9 +29,13 @@ router.get('/show-m/:id', (req, res, next) => {
 }
 )
 
+// get and render new movie details
+
 router.get('/new-m', (req, res, next) => {
     res.render("new-m");
 });
+
+// send data from the body into Movie database
 
 router.post('/new-m', (req, res, next) => {
 
@@ -44,6 +52,7 @@ router.post('/new-m', (req, res, next) => {
 }
 )
 
+// delete a movie from the DB
 
 router.post('/:id/delete', (req, res, next) => {
 
@@ -59,6 +68,7 @@ router.post('/:id/delete', (req, res, next) => {
 }
 )
 
+// get and render edit movie page
 
 router.get('/:id/edit-movies/', (req, res, next) => {
     const movieId = req.params.id
@@ -74,6 +84,8 @@ router.get('/:id/edit-movies/', (req, res, next) => {
 }
 )
 
+// send data from the body to the db in order to edit a movie
+
 router.post('/:id/edit-movies/', (req, res, next) => {
     const { title, genre, plot } = req.body;
     Movie.update({ _id: req.params.id }, { $set: { title, genre, plot } })
@@ -86,9 +98,18 @@ router.post('/:id/edit-movies/', (req, res, next) => {
 });
 
 
-/* router.get('/index', (req, res, next) => {
+/* 
 
-}) */
+Add a realtionship between two databases below 
+                       |
+                       |
+                       v  
+                                                                                                                   
+ */
+
+
+
+// add an actor inside the "show details" of a movie -->  get and render page to add actor
 
 
 router.get('/show-m/:id/add-celeb/', (req, res, next) => {
@@ -107,6 +128,8 @@ router.get('/show-m/:id/add-celeb/', (req, res, next) => {
         })
 }
 )
+
+// post data to celeb DB + link celeb with actors field in movies DB --> redirect to index
 
 router.post('/show-m/:id/add-celeb/', (req, res, next) => {
 
