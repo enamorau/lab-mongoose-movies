@@ -32,16 +32,19 @@ const movies = [
         title: "Alice in answerland",
         genre: "documentary",
         plot: "Alice looking everywhere for answers",
+
     },
     {
         title: "006",
         genre: "genre",
         plot: "A 5 hour long introspection on being one number short from being 007 ",
+       
     },
     {
         title: "never shot",
         genre: "undefined",
         plot: "void",
+    
     }
 
 ]

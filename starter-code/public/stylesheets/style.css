@@ -5,6 +5,13 @@ body {
 a {
   color: #00B7FF; 
 text-decoration: none;
+font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+  color: #00B7FF;
+  font-weight: 900;
 }
 
   span {
@@ -27,19 +34,34 @@ text-decoration: none;
   cursor: pointer;
   float:  right;
   white-space: nowrap;
-  background: linear-gradient(180deg,#f9f9f9 0%,#e0e0e0 100%);
+  background: linear-gradient(180deg,grey 0%,#858585 100%);
   border-radius: 100px;
-  border: 0.5px solid rgba(0%,0%,0%,0.2);
-  border-width: 0.5px 0.5px 0.5px 0.5px;
   padding: 4px 22px 5px 22px;
-  box-shadow: 0px 1px 1px rgba(0%,0%,0%,0.6),0px 0px 5px rgba(255,255,255,1),0px 1px 0px 3px rgba(0,0,0,0.2),inset 0px 1px 0px rgba(255,255,255,1);
-    color: grey;
   font-size: 16px;
   font-family: Helvetica Neue;
   font-weight: 900;
   font-style: normal;
   margin-left: 30px;
   text-decoration: none;
+  color: white;
+  }
+
+  .button-celeb {
+    position: relative;
+  cursor: pointer;
+  float:  right;
+  background: white;
+  border-width: medium;
+  border: solid #858585;
+  border-radius: 100px;
+  padding: 4px 22px 5px 22px;
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 30px;
+  text-decoration: none;
+  color: #858585;
   }
 
 
@@ -50,22 +72,51 @@ text-decoration: none;
   cursor: pointer;
   float:  right;
   white-space: nowrap;
-  background: linear-gradient(180deg,red 0%, brown 100%);
+  background: white;
+  border-color: #ff2525;
+  border-width: 2px;
   border-radius: 100px;
-  border: 0.5px solid rgba(0%,0%,0%,0.2);
-  border-width: 0.5px 0.5px 0.5px 0.5px;
   padding: 4px 22px 5px 22px;
-  box-shadow: 0px 1px 1px rgba(0%,0%,0%,0.6),0px 0px 5px rgba(255,255,255,1),0px 1px 0px 3px rgba(0,0,0,0.2),inset 0px 1px 0px rgba(255,255,255,1);
-    color: white;
   font-size: 16px;
   font-family: Helvetica Neue;
   font-weight: 900;
   font-style: normal;
   margin-left: 30px;
   text-decoration: none;
+  color: #ff2525;
   }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: grey;
+  overflow: hidden;
+  border-radius: 20px;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #00B7FF;
+  color: white;
+  border-radius: 20px;
+}
 /*# sourceMappingURL=style.css.map */
 
 

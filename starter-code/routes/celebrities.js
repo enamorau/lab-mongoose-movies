@@ -30,6 +30,8 @@ router.get('/new', (req, res, next) => {
     res.render("new");
 });
 
+//add new celebrity
+
 router.post('/new', (req, res, next) => {
 
     const { name, occupation, catchPhrase } = req.body;

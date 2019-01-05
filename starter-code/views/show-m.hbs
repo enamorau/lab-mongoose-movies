@@ -2,4 +2,15 @@
 <br>
 <p>Genre: {{movies.genre}}</p>
 <p>plot: {{movies.plot}}</p>
-<a href="/movies/index">Return</a>
+
+<h3>Actors:</h3>
+<ul>
+    {{#each movies.actors}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
+
+<a class="button-celeb" href="/movies/show-m/{{movies._id}}/add-celeb/">add actors</a>
+
+
+<a style="font-weight: bolder" href="/movies/index">Return</a>
